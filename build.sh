@@ -14,14 +14,14 @@ version=3.4.0
 
 if [ -z $target ]; then
 echo "choose your target device"
-echo "1) l3 ii"
-echo "2) l5"
-echo "3) l7"
+echo "1) E430"
+echo "2) E425"
+echo "3) E435"
 read -p "1/2/3: " choice
 case "$choice" in
 1 ) export target=e430 ; export defconfig=vee3-rev_11_led_defconfig;;
-2 ) export target=e610 ; export defconfig=cyanogenmod_m4_defconfig;;
-3 ) export target=p700 ; export defconfig=cyanogenmod_u0_defconfig;;
+2 ) export target=e425 ; export defconfig=vee3-rev_11_led_defconfig;;
+3 ) export target=e435 ; export defconfig=vee3ds-rev_11_defconfig;;
 * ) echo "invalid choice"; sleep 2 ; $0;;
 esac
 fi # [ -z $target ]
